@@ -45,8 +45,8 @@ input {
   border-radius: 20px;
   padding: 0.5rem;
   font-size: 1.25rem;
-  outline-color: rgba(241, 21, 21, 0.2);
-  color: var(--text-colour);
+  outline-color: rgba(0, 0, 0, 0.2);
+  color: var(--box-colour);
 }
 
 button {
