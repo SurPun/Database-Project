@@ -1,0 +1,121 @@
+:root {
+  --primary-colour: #000000;
+  --secondary-colour: #121212;
+  --box-colour: #2f2c37;
+  --text-colour: #ffffff;
+  --font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--primary-colour);
+  color: var(--text-colour);
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  max-width: 50vw;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+label {
+  margin-bottom: 0.25rem;
+}
+
+input {
+  background-color: var(--text-colour);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  outline-color: rgba(241, 21, 21, 0.2);
+  color: var(--text-colour);
+}
+
+button {
+  background-color: var(--secondary-colour);
+  border: 1px white solid;
+  width: 4rem;
+  height: 2rem;
+  color: var(--text-colour);
+  margin: 0 auto;
+  border-radius: 2rem;
+  transition: 0.2s linear all;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.2s linear all;
+  transform: scale(1.07);
+}
+
+.grid-container {
+  background-color: var(--secondary-colour);
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 80vw;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%/1, max(64px, 100%/3)), 1fr)
+  );
+  justify-items: center;
+  list-style: none;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.tile {
+  background-color: var(--box-colour);
+  border-radius: 20px;
+  width: min(20ch, calc(80% + 1em));
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  form {
+    width: 28rem;
+  }
+  .grid-container {
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%/1, max(64px, 100%/2)), 1fr)
+    );
+  }
+}
+
+.ratings {
+  color: orange;
+}

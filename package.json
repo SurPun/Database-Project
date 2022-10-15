@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^7.6.2",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+
+    "dev": "DB_FILE=db.sqlite nodemon src/index.js",
+    "dev-win": "SET DB_FILE=db.sqlite & nodemon src/index.js",
+
+    "seed": "DB_FILE=db.sqlite node src/database/seed.js",
+    "seed-win": "SET DB_FILE=db.sqlite & node src/database/seed.js",
+
+    "test:1": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/one.test.js",
+    "test:1-win": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings tests/1.test.js",
+
+    "test:2": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings tests/2.test.js",
+    "test:2-win": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings tests/2.test.js",
+
+    "test:3": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings tests/3.test.js",
+    "test:3-win": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings tests/3.test.js",
+
+    "test:4": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings tests/4.test.js",
+    "test:4-win": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings tests/4.test.js"
+  }
+}
