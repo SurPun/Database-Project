@@ -1,4 +1,4 @@
-# Week 2: Database
+# Week 2: Database (F&C)
 ### By: Alex, Abby, Manoela & Suraj
 
 A music sharing app where you can share your favourite songs for your friends!
